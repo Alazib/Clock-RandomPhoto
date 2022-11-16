@@ -1,5 +1,5 @@
-import Clock from "./Clock"
-import Image from "./Image"
+import Clock from "./components/Clock"
+import Image from "./components/Image"
 
 function App() {
   return (

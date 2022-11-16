@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
 
 export default function Clock() {
-  const [second, setSecond] = useState(0)
-
+  const [currentTime, setCurrentTime] = useState(
+    new Date().toLocaleTimeString()
+  )
   const currentDate = new Date().toLocaleDateString()
-  const currentTime = new Date().toLocaleTimeString()
 
   useEffect(() => {
     setInterval(() => {
-      setSecond(second + 1)
+      setCurrentTime(new Date().toLocaleTimeString())
     }, 1000)
   }, [])
 
