@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function Image() {
+export default function Image() {
   const [randomPic, setRandomPic] = useState("https://picsum.photos/200")
 
   useEffect(() => {
@@ -13,5 +13,3 @@ function Image() {
 
   return <img src={randomPic} alt="random pic" className="random-picture"></img>
 }
-
-export default Image()

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function Clock() {
+export default function Clock() {
   const [second, setSecond] = useState(0)
 
   const currentDate = new Date().toLocaleDateString()
@@ -9,7 +9,7 @@ function Clock() {
   useEffect(() => {
     setInterval(() => {
       setSecond(second + 1)
-    })
+    }, 1000)
   }, [])
 
   return (
@@ -19,5 +19,3 @@ function Clock() {
     </>
   )
 }
-
-export default Clock()
